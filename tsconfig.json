@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    // or any other target you prefer
+    "module": "commonjs",
+    // or "esnext" if using modern ES module syntax
+    "outDir": "./dist",
+    // output directory for compiled files
+    "rootDir": "./src",
+    // root directory of input files
+    "strict": true,
+    // enable all strict type-checking options
+    "esModuleInterop": true,
+    // enables emit interoperability between CommonJS and ES Modules
+    "resolveJsonModule": true,
+    // allows importing JSON files
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

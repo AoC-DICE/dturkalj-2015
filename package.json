@@ -1,0 +1,24 @@
+{
+  "name": "dturkalj-2015",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AoC-Traning/dturkalj-2015.git"
+  },
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/AoC-Traning/dturkalj-2015/issues"
+  },
+  "homepage": "https://github.com/AoC-Traning/dturkalj-2015#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
