@@ -7,6 +7,7 @@
     "outDir": "./dist",
     // output directory for compiled files
     "rootDir": "./src",
+    "sourceMap": true,
     // root directory of input files
     "strict": true,
     // enable all strict type-checking options
