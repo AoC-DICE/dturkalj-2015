@@ -64,7 +64,7 @@ function evaluateWire(wire: string): number {
     return value;
 }
 
-let input = fs.readFileSync('src/day7/input.txt', "utf-8");
+let input = fs.readFileSync('src/day7/input2.txt', "utf-8");
 let instructions = input.split("\n");
 let wires: Record<string, Operation | number> = {};
 
