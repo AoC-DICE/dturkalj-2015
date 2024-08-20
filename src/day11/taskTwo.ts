@@ -8,7 +8,7 @@ function day11TaskTwo() {
 
     console.log(`New password: ${newPassword}`);
 
-    function incrementString(password) {
+    function incrementString(password: string): string {
         let arr = password.split('');
         for (let i = arr.length - 1; i >= 0; i--) {
             if (arr[i] === 'z') {
@@ -21,7 +21,7 @@ function day11TaskTwo() {
         return 'a' + arr.join('');
     }
 
-    function isValidPassword(password) {
+    function isValidPassword(password: string): boolean {
         if (/[iol]/.test(password)) return false;
         if (!/(abc|bcd|cde|def|efg|fgh|ghi|hij|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz)/.test(password)) return false;
         const pairs = password.match(/([a-hj-np-z])\1/g);
