@@ -1,60 +1,52 @@
 import * as fs from 'fs';
 
-let directions: string = fs.readFileSync('src/day3/input.txt', "utf-8");
-let santaX: number = 0;
-let santaY: number = 0;
-let robotX: number = 0;
-let robotY: number = 0;
+function day3TaskTwo() {
+    let directions: string = fs.readFileSync('src/day3/input.txt', "utf-8");
+    let santaX: number = 0;
+    let santaY: number = 0;
+    let robotX: number = 0;
+    let robotY: number = 0;
 
-let houses = new Set<string>;
-houses.add(`${santaX}, ${santaY}`);
-
-for (let i = 0; i < directions.length; i++) {
-    if (i % 2 == 0) {
-        switch (directions[i]) {
+    function move(person: string, index: number): void {
+        switch (directions[index]) {
             case ">": {
-                santaX++;
+                if (person == "santa") santaX++;
+                else robotX++;
                 break;
             }
             case "<": {
-                santaX--;
+                if (person == "santa") santaX--;
+                else robotX--;
                 break;
             }
             case "^": {
-                santaY++;
+                if (person == "santa") santaY++;
+                else robotY++;
                 break;
             }
             case "v": {
-                santaY--;
+                if (person == "santa") santaY--;
+                else robotY--;
                 break;
             }
             default:
                 throw new Error("Invalid direction");
         }
-        houses.add(`${santaX}, ${santaY}`);
-    } else {
-        switch (directions[i]) {
-            case ">": {
-                robotX++;
-                break;
-            }
-            case "<": {
-                robotX--;
-                break;
-            }
-            case "^": {
-                robotY++;
-                break;
-            }
-            case "v": {
-                robotY--;
-                break;
-            }
-            default:
-                throw new Error("Invalid direction");
-        }
-        houses.add(`${robotX}, ${robotY}`);
     }
+
+    let houses = new Set<string>;
+    houses.add(`${santaX}, ${santaY}`);
+    for (let i = 0; i < directions.length; i++) {
+        if (i % 2 == 0) {
+            move("santa", i);
+            houses.add(`${santaX}, ${santaY}`);
+        } else {
+            move("robot", i);
+            houses.add(`${robotX}, ${robotY}`);
+        }
+    }
+
+    console.log(houses.size);
 }
 
-console.log(houses.size);
+day3TaskTwo();
