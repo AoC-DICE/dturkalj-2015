@@ -1,3 +1,4 @@
+// @ts-nocheck
 function day9TaskOne() {
     const INF = Number.MAX_SAFE_INTEGER;
     let minDistanceFinal = Number.MAX_SAFE_INTEGER;

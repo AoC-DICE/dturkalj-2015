@@ -1,3 +1,4 @@
+// @ts-nocheck
 function day9TaskOneBackup() {
     class MyNode {
         path: any[];
