@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-function day14TaskTwo() {
+function day15TaskTwo() {
     type Ingredient = {
         name: string,
         capacity: number,
@@ -60,4 +60,4 @@ function day14TaskTwo() {
     console.log(`Best result: ${bestResult}, combination: ${bestCombination}`);
 }
 
-day14TaskTwo();
+day15TaskTwo();

@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-function day14TaskOne() {
+function day14TaskTwo() {
     type Reindeer = {
         speed: number,
         flyingTime: number,
@@ -70,4 +70,4 @@ function day14TaskOne() {
     }
 }
 
-day14TaskOne();
+day14TaskTwo();

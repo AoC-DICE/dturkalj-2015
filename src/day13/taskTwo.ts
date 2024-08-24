@@ -1,7 +1,7 @@
 // @ts-nocheck
 import fs from 'fs';
 
-function day13TaskOne() {
+function day13TaskTwo() {
     let input = fs.readFileSync('src/day13/input.txt', "utf-8");
     let lines = input.split("\n");
     let numberOfPeople = 8;
@@ -74,4 +74,4 @@ function day13TaskOne() {
     }
 }
 
-day13TaskOne();
+day13TaskTwo();
